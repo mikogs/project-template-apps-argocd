@@ -9,3 +9,5 @@ resources:
 patchesStrategicMerge:
 - argocd-cm.yaml
 - argocd-server.yaml
+- argocd-clusterrolebinding-argocd-application-controller.yaml
+- argocd-clusterrolebinding-argocd-server.yaml
