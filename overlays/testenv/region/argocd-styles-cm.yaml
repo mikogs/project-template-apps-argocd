@@ -24,7 +24,7 @@ data:
       border-color: #e0edeb;
     }
     .nav-bar__version::after {
-      content: "devenv";
+      content: "testenv";
       display: block;
       color: #e0edeb;
     }
