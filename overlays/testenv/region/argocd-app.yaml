@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: testenv-argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mikogs/project-template-envs.git
+    targetRevision: HEAD
+    path: testenv/argocd/overlays/testenv/region/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: testenv-argocd
+  syncPolicy:
+    automated: {}
