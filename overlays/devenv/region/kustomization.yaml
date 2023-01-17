@@ -8,6 +8,7 @@ resources:
 - argocd-nodeport.yaml
 - prometheus.yaml
 - grafana.yaml
+- node.yaml
 patchesStrategicMerge:
 - argocd-cm.yaml
 - argocd-server.yaml
