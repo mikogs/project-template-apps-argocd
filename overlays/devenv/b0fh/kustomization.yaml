@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: devenv-argocd
 resources:
 - argocd-styles-cm.yaml
+- argocd-nodeport.yaml
 patchesStrategicMerge:
 - argocd-cm.yaml
 - argocd-server.yaml
-- argocd-nodeport.yaml
