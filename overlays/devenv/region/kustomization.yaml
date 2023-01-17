@@ -6,6 +6,7 @@ namespace: devenv-argocd
 resources:
 - argocd-styles-cm.yaml
 - argocd-nodeport.yaml
+- prometheus.yaml
 patchesStrategicMerge:
 - argocd-cm.yaml
 - argocd-server.yaml

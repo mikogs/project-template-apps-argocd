@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: devenv-argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mikogs/project-template-envs.git
+    targetRevision: HEAD
+    path: devenv/argocd/overlays/devenv/region/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: devenv-argocd
+  syncPolicy:
+    automated: {}

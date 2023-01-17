@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: devenv-argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mikogs/project-template-envs.git
+    path: devenv/prometheus/overlays/devenv/
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: devenv-prometheus
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
