@@ -1,0 +1,57 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devenv-frontend-region
+  namespace: devenv-apps
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mikogs/project-template-envs.git
+    path: devenv/frontend/overlays/devenv/region/
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: devenv-apps
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devenv-frontend-region2
+  namespace: devenv-apps
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mikogs/project-template-envs.git
+    path: devenv/frontend/overlays/devenv/region2/
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: devenv-apps
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devenv-frontend-region3
+  namespace: devenv-apps
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mikogs/project-template-envs.git
+    path: devenv/frontend/overlays/devenv/region3/
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: devenv-apps
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
