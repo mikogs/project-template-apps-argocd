@@ -2,17 +2,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: node-region
-  namespace: devenv-apps
+  name: testenv-node-region
+  namespace: testenv-apps
 spec:
   project: default
   source:
     repoURL: https://github.com/mikogs/project-template-envs.git
-    path: devenv/node/overlays/devenv/region/
+    path: testenv/node/overlays/testenv/region/
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: devenv-apps
+    namespace: testenv-apps
   syncPolicy:
     automated: {}
     syncOptions:
@@ -21,17 +21,17 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: node-region2
-  namespace: devenv-apps
+  name: testenv-node-region2
+  namespace: testenv-apps
 spec:
   project: default
   source:
     repoURL: https://github.com/mikogs/project-template-envs.git
-    path: devenv/node/overlays/devenv/region2/
+    path: testenv/node/overlays/testenv/region2/
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: devenv-apps
+    namespace: testenv-apps
   syncPolicy:
     automated: {}
     syncOptions:
@@ -40,17 +40,17 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: node-region3
-  namespace: devenv-apps
+  name: testenv-node-region3
+  namespace: testenv-apps
 spec:
   project: default
   source:
     repoURL: https://github.com/mikogs/project-template-envs.git
-    path: devenv/node/overlays/devenv/region3/
+    path: testenv/node/overlays/testenv/region3/
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: devenv-apps
+    namespace: testenv-apps
   syncPolicy:
     automated: {}
     syncOptions:
