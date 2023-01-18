@@ -8,6 +8,8 @@ resources:
 - grafana.yaml
 - devenv-node.yaml
 - testenv-node.yaml
+- devenv-frontend.yaml
+- testenv-frontend.yaml
 - ./../../../base
 - fe-alex-expert.yaml
 patchesStrategicMerge:
