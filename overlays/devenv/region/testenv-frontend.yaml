@@ -2,13 +2,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: testenv-node-region
+  name: testenv-frontend-region
   namespace: testenv-apps
 spec:
   project: default
   source:
     repoURL: https://github.com/mikogs/project-template-envs.git
-    path: testenv/node/overlays/testenv/region/
+    path: testenv/frontend/overlays/testenv/region/
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
@@ -21,13 +21,13 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: testenv-node-region2
+  name: testenv-frontend-region2
   namespace: testenv-apps
 spec:
   project: default
   source:
     repoURL: https://github.com/mikogs/project-template-envs.git
-    path: testenv/node/overlays/testenv/region2/
+    path: testenv/frontend/overlays/testenv/region2/
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
@@ -40,13 +40,13 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: testenv-node-region3
+  name: testenv-frontend-region3
   namespace: testenv-apps
 spec:
   project: default
   source:
     repoURL: https://github.com/mikogs/project-template-envs.git
-    path: testenv/node/overlays/testenv/region3/
+    path: testenv/frontend/overlays/testenv/region3/
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
