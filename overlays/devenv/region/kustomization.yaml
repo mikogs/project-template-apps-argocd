@@ -1,5 +1,3 @@
-bases:
-- ./../../../base
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: devenv-argocd
@@ -10,6 +8,8 @@ resources:
 - grafana.yaml
 - devenv-node.yaml
 - testenv-node.yaml
+- ./../../../base
+- fe-alex-expert.yaml
 patchesStrategicMerge:
 - argocd-cm.yaml
 - argocd-server.yaml

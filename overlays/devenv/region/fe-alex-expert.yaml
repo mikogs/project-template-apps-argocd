@@ -1,0 +1,20 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fe-alex-expert-node
+  namespace: devenv-argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/mikogs/project-template-envs.git
+    path: featureenvs/alex-expert/
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: fe-alex-expert
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+
