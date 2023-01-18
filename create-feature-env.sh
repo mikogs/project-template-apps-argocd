@@ -5,7 +5,7 @@ if [[ "$1" == "" ]]; then
   exit 1
 fi
 
-cat >devenv/argocd/overlays/devenv/region/fe-$1.yaml <<EOF
+cat >overlays/devenv/region/fe-$1.yaml <<EOF
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -27,5 +27,5 @@ spec:
       - CreateNamespace=true
 
 EOF
-cd devenv/argocd/overlays/devenv/region
+cd overlays/devenv/region
 kustomize edit add resource fe-$1.yaml
