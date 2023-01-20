@@ -12,7 +12,6 @@ resources:
 - testenv-frontend.yaml
 - ./../../../base
 - fe-alex-expert.yaml
-- fe-back-to-the-chopper.yaml
 patchesStrategicMerge:
 - argocd-cm.yaml
 - argocd-server.yaml
